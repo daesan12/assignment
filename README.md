@@ -7,7 +7,7 @@ Swagger UI를 통해 API확인가능
 
 > **🔗 API 문서 URL**
 > - 로컬: [http://localhost:8080/swagger-ui.html](http://localhost:8080/swagger-ui.html)
-> - 배포 환경: [http://ip(ip아직 안 나옴)/swagger-ui.html](http://your-ec2-ip/swagger-ui.html)
+> - 배포 환경: [http://3.39.231.118:8080/v3/api-docs](http://your-ec2-ip/swagger-ui.html)
 
 ---
 
