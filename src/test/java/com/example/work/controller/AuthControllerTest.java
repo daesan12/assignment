@@ -54,16 +54,16 @@ class AuthControllerTest {
     void 회원가입_성공() throws Exception {
         SignupRequest signupRequest = new SignupRequest("testuser", "password123", "테스트유저");
         System.out.println("signupRequest: " + objectMapper.writeValueAsString(signupRequest));
-        // ✅ 사용자 중복 체크 설정
+
         when(userRepository.existsByUsername("testuser")).thenReturn(false);
         when(passwordEncoder.encode("password123")).thenReturn("encodedPassword");
 
-        // ✅ 저장될 사용자 객체 생성
+
         User savedUser = new User(1L, "testuser", "encodedPassword", "테스트유저", RoleType.USER);
 
-        // ✅ userRepository.save()가 실제로 저장될 객체를 반환하도록 설정
+
         when(userRepository.save(any(User.class))).thenAnswer(invocation -> {
-            User user = invocation.getArgument(0);  // 저장할 객체를 가져옴
+            User user = invocation.getArgument(0);
             return new User(1L, user.getUsername(), user.getPassword(), user.getNickname(), user.getRole());
         });
 

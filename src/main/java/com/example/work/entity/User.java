@@ -25,7 +25,7 @@ public class User implements UserDetails {
     @Column(unique = true, nullable = false)
     private String username;
 
-    @JsonIgnore // ✅ JSON 응답에 포함되지 않도록 설정
+    @JsonIgnore
     @Column(nullable = false)
     private String password;
 
@@ -33,7 +33,7 @@ public class User implements UserDetails {
 
     @Enumerated(EnumType.STRING)
     @Column(nullable = false)
-    private RoleType role;  // ✅ 단일 Role 저장 (USER, ADMIN 중 하나)
+    private RoleType role;
 
     @Override
     public Collection<? extends GrantedAuthority> getAuthorities() {

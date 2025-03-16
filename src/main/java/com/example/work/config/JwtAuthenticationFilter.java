@@ -41,19 +41,15 @@ public class JwtAuthenticationFilter extends OncePerRequestFilter {
         String token = authHeader.substring(7);
 
         try {
-            // ✅ JWT에서 사용자명 추출
             String username = jwtUtil.extractUsername(token);
 
-            // ✅ DB에서 사용자 정보 조회
             UserDetails userDetails = userDetailsService.loadUserByUsername(username);
 
-            // ✅ JWT 유효성 검사
             if (!jwtUtil.validateToken(token, userDetails)) {
                 sendInvalidTokenResponse(response);
                 return;
             }
 
-            // ✅ Spring Security 인증 정보 설정
             UsernamePasswordAuthenticationToken authentication = new UsernamePasswordAuthenticationToken(
                     userDetails, null, userDetails.getAuthorities()
             );

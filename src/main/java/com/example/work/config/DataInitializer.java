@@ -30,7 +30,7 @@ public class DataInitializer implements CommandLineRunner {
                     .role(RoleType.ADMIN) // ADMIN 역할 설정
                     .build();
             userRepository.save(adminUser);
-            System.out.println("✅ 기본 ADMIN 계정 생성 완료 (username: admin, password: admin123)");
+            System.out.println(" 기본 ADMIN 계정 생성 완료 (username: admin, password: admin123)");
 
     }
 }
