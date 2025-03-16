@@ -1,14 +1,22 @@
 #  바로인턴 10기 JAVA 과제
 
 ## 📌 개요
- **사용자 인증 및 관리자 권한 관리** 기능 구현
-JWT 기반 인증, **회원가입, 로그인, 관리자 권한 변경** 등의 기능이 제공
-Swagger UI를 통해 API확인가능
+- **사용자 인증 및 관리자 권한 관리** 기능 구현  
+- JWT 기반 인증, **회원가입, 로그인, 관리자 권한 변경** 등의 기능 제공  
+- **Swagger UI**를 통해 API 확인 및 테스트 가능  
+- **AWS EC2 서버에 배포 완료**
+  
+- **배포 서버 (EC2 IP)**: `http://3.39.231.118:8080/`
 
-> **🔗 API 문서 URL**
-> - 로컬: [http://localhost:8080/swagger-ui.html](http://localhost:8080/swagger-ui.html)
-> - 배포 환경: [http://ip(ip아직 안 나옴)/swagger-ui.html](http://your-ec2-ip/swagger-ui.html)
+## 📄 API 문서
 
+### 🔗 Swagger UI & API Docs
+
+- **Swagger UI**: [Swagger UI 바로가기](http://3.39.231.118:8080/swagger-ui/index.html)  
+  → API를 시각적으로 테스트할 수 있습니다.
+
+- **API 명세서 (JSON)**: [v3 API Docs](http://3.39.231.118:8080/v3/api-docs)  
+  → API 정보를 JSON 형태로 확인할 수 있습니다.
 ---
 
 ### 기본 관리자 계정 (서버 실행 시 자동 생성)
